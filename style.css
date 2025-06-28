@@ -76,6 +76,11 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-maps:hover {
+  background: #3d2b1f;
 }
 
 /* Tanda Kasih Section */
@@ -103,6 +108,13 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.rekening button:hover {
+  background-color: #3d2b1f;
 }
 
 /* Musik Icon */
@@ -114,6 +126,9 @@ body {
   height: 50px;
   z-index: 1000;
   cursor: pointer;
+}
+
+#music-icon.putar {
   animation: spin 5s linear infinite;
 }
 

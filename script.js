@@ -10,10 +10,15 @@ function copyToClipboard(text) {
 // Toggle play/pause musik
 function toggleMusic() {
   const audio = document.getElementById("bg-music");
+  const musicIcon = document.getElementById("music-icon");
+
   if (audio.paused) {
     audio.play();
+    audio.muted = false;
+    musicIcon.classList.add("putar");
   } else {
     audio.pause();
+    musicIcon.classList.remove("putar");
   }
 }
 
@@ -21,11 +26,14 @@ function toggleMusic() {
 window.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("bg-music");
   const tapHint = document.getElementById("tap-to-play");
+  const musicIcon = document.getElementById("music-icon");
 
   function startMusic() {
     if (audio) {
       audio.muted = false;
-      audio.play().catch(() => {}); // Catch agar tidak error
+      audio.play().then(() => {
+        if (musicIcon) musicIcon.classList.add("putar");
+      }).catch(() => {});
     }
 
     if (tapHint) {
