@@ -6,6 +6,13 @@
   <title>Undangan Pernikahan</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph untuk preview saat dibagikan -->
+  <meta property="og:title" content="Undangan Pernikahan - Muh Amin Syarif & Sarina" />
+  <meta property="og:description" content="Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Anda untuk hadir di acara pernikahan kami." />
+  <meta property="og:image" content="https://budis420.github.io/undangan-pernikahan/assets/images/thumbnail.jpg" />
+  <meta property="og:url" content="https://budis420.github.io/undangan-pernikahan/" />
+  <meta property="og:type" content="website" />
 </head>
 <body>
 
@@ -23,19 +30,18 @@
 <section class="acara">
   <h2>Petunjuk & Acara</h2>
   <p class="ayat">
-  "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
-  agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
-  Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
-  <br><strong>- QS. Ar-Rum: 21 -</strong>
-</p>
-
+    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+    agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
+    Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+    <br><strong>- QS. Ar-Rum: 21 -</strong>
+  </p>
 
   <div class="box-acara">
     <p><strong>Minggu, 06 Juli 2025</strong></p>
-    <p>09.00 WIB s/d Selesai WITA</p>
+    <p>09.00 WITA s/d Selesai</p>
     <p>Akad Nikah</p>
     <p><strong>Rumah Calon Mempelai Wanita</strong><br/>
-    Jalan Poros Lancibung, Kabupaten Sinjai, Sulawesi Selatan</p>
+      Jalan Poros Lancibung, Kabupaten Sinjai, Sulawesi Selatan</p>
     <a href="https://maps.app.goo.gl/fvXJdoDjskaxeQqu8?g_st=ipc" target="_blank" class="btn-maps">📍 Lihat Lokasi di Google Maps</a>
   </div>
 </section>
@@ -49,23 +55,29 @@
   </p>
 
   <div class="rekening">
-    <h3>a/n Muh Amin Syarif -BNI<br>1929074084</h3>
+    <h3>a/n Muh Amin Syarif - BNI<br>1929074084</h3>
     <button onclick="copyToClipboard('1929074084')">Salin</button>
     <hr />
-    <h3>a/n Sarina -BNI<br>1886423442</h3>
+    <h3>a/n Sarina - BNI<br>1886423442</h3>
     <button onclick="copyToClipboard('1886423442')">Salin</button>
   </div>
 </section>
 
-<script src="script.js"></script>
-
 <!-- Musik -->
-<audio id="bg-music" src="assets/music.mp3/Bermuara.mp3" autoplay loop></audio>
+<audio id="bg-music" src="assets/music/Bermuara.mp3" autoplay loop muted></audio>
 
 <!-- Logo Musik Berputar -->
 <div id="music-icon" onclick="toggleMusic()">
   <img src="assets/images/pa.png" alt="Music" />
 </div>
+
+<!-- Teks Animasi Ketuk untuk Musik -->
+<div id="tap-to-play" class="tap-hint">
+  👆 Ketuk untuk memutar musik
+</div>
+
+<!-- Script -->
+<script src="script.js"></script>
 
 </body>
 </html>
