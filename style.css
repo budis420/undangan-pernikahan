@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffaf4;
+  color: #3d2b1f;
+}
+
+.hero-text {
+  background: url('assets/images/WhatsApp\ Image\ 2025-06-28\ at\ 20.30.42.jpeg') no-repeat center center/cover;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7a5c3d;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin: 1rem 0;
+}
+
+.hero-text p {
+  font-size: 1rem;
+}
+
+.hero-text .tanggal {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.acara {
+  padding: 2rem;
+  background-color: #fff8ef;
+  text-align: center;
+}
+
+.acara .ayat {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #5a3b1e;
+  padding: 0 1rem;
+}
+
+.box-acara {
+  margin: auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 90%;
+}
+
+.btn-maps {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #5a3b1e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.tanda-kasih {
+  background-color: #2c1d0f;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.rekening {
+  background: #fff8ee;
+  color: #3d2b1f;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.rekening button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #5a3b1e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#music-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: spin 5s linear infinite;
+}
+
+#music-icon img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 600px) {
+  .hero-text {
+    padding: 2rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p,
+  .hero-text .tanggal {
+    font-size: 1rem;
+  }
+
+  .box-acara {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .rekening {
+    width: 90%;
+  }
+
+  #music-icon {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  
+}
