@@ -20,9 +20,11 @@
 <section class="hero-text">
   <div class="container">
     <h1>Pernikahan</h1>
-    <h2>Muh Amin Syarif 
-      <b>&</b>
-       Sarina</h2>
+    <h2>Muh Amin Syarif & Sarina</h2>
+
+    <!-- Salam tamu otomatis -->
+    <p id="salam-tamu" class="salam-tamu" style="margin-top: 1rem; font-size: 1rem;"></p>
+
     <p>Tanpa mengurangi rasa hormat,<br/>Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara Pernikahan Kami.</p>
     <div class="tanggal">06 . 07 . 2025</div>
   </div>
@@ -80,6 +82,22 @@
 
 <!-- Script -->
 <script src="script.js"></script>
+
+<!-- Tambahan script salam tamu -->
+<script>
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const namaTamu = getQueryParam("to");
+    if (namaTamu) {
+      const salam = document.getElementById("salam-tamu");
+      salam.innerText = `Yth. Bapak/Ibu ${decodeURIComponent(namaTamu)}`;
+    }
+  });
+</script>
 
 </body>
 </html>
