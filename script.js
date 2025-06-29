@@ -7,42 +7,49 @@ function copyToClipboard(text) {
   });
 }
 
-// Toggle play/pause musik
-function toggleMusic() {
-  const audio = document.getElementById("bg-music");
-  const musicIcon = document.getElementById("music-icon");
-
-  if (audio.paused) {
-    audio.play();
-    audio.muted = false;
-    musicIcon.classList.add("putar");
-  } else {
-    audio.pause();
-    musicIcon.classList.remove("putar");
-  }
+// Fungsi ambil parameter dari URL
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
 }
 
-// Mulai musik dan sembunyikan teks animasi setelah interaksi pertama
-window.addEventListener("DOMContentLoaded", () => {
+// Tampilkan nama tamu jika ada di URL
+document.addEventListener("DOMContentLoaded", () => {
+  const namaTamu = getQueryParam("to");
+  if (namaTamu) {
+    const salam = document.getElementById("salam-tamu");
+    if (salam) {
+      salam.innerText = `Yth. Bapak/Ibu/Saudara/i ${decodeURIComponent(namaTamu)}`;
+    }
+  }
+
   const audio = document.getElementById("bg-music");
   const tapHint = document.getElementById("tap-to-play");
-  const musicIcon = document.getElementById("music-icon");
 
+  // Play musik saat user pertama kali klik/tap
   function startMusic() {
-    if (audio) {
+    if (audio.paused) {
       audio.muted = false;
-      audio.play().then(() => {
-        if (musicIcon) musicIcon.classList.add("putar");
-      }).catch(() => {});
+      audio.play().catch(() => {});
     }
 
-    if (tapHint) {
-      tapHint.style.display = "none";
-    }
-
+    if (tapHint) tapHint.style.display = "none";
     document.removeEventListener("click", startMusic);
   }
 
-  // Deteksi klik pertama pengguna
   document.addEventListener("click", startMusic);
 });
+
+// Toggle play/pause musik via ikon
+function toggleMusic() {
+  const audio = document.getElementById("bg-music");
+  const tapHint = document.getElementById("tap-to-play");
+
+  if (audio.paused) {
+    audio.muted = false;
+    audio.play().catch(() => {});
+    if (tapHint) tapHint.style.display = "none";
+  } else {
+    audio.pause();
+  }
+}

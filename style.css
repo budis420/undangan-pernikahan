@@ -204,3 +204,23 @@ body {
     bottom: 80px;
   }
 }
+
+/* Salam tamu pribadi */
+#salam-tamu {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Responsif salam tamu */
+@media (max-width: 600px) {
+  #salam-tamu {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
